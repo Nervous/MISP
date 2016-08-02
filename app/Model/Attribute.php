@@ -207,7 +207,7 @@ class Attribute extends AppModel {
             'Screenshot' => array(
 					'desc' => 'Screenshot of the event',
                     'formdesc' => 'Screenshot of the state of the computer after the computer was compromised, or of the malware execution.',
-                    'types' => array('screenshot')
+                    'types' => array('screenshot', 'attachment')
                 ),
 			'Artifacts dropped' => array(
 					'desc' => 'Any artifact (files, registry keys etc.) dropped by the malware or other modifications to the system',
