@@ -133,7 +133,6 @@
 			<div id="filter_<?php echo $group; ?>" title="Only show <?php echo $group; ?> related attributes" class="attribute_filter_text<?php if ($attributeFilter == $group) echo '_active'; ?>" onClick="filterAttributes('<?php echo $group; ?>', '<?php echo h($event['Event']['id']); ?>');"><?php echo ucfirst($group); ?></div>
 		<?php endforeach; ?>
 		<div id="filter_proposal" title="Only show proposals" class="attribute_filter_text<?php if ($attributeFilter == 'proposal') echo '_active'; ?>" onClick="filterAttributes('proposal', '<?php echo h($event['Event']['id']); ?>');">Proposal</div>
-		<div id="filter_correlation" title="Only show correlating attributes" class="attribute_filter_text<?php if ($attributeFilter == 'correlation') echo '_active'; ?>" onClick="filterAttributes('correlation', '<?php echo h($event['Event']['id']); ?>');">Correlation</div>
 		<div id="filter_screenshots" title="Only show screenshots" class="attribute_filter_text<?php if ($attributeFilter == 'screenshot') echo '_active'; ?>" onClick="filterAttributes('warning', '<?php echo h($event['Event']['id']); ?>');">Screenshots</div>
 		<div id="filter_correlation" title="Only show correlating attributes" class="attribute_filter_text<?php if ($attributeFilter == 'correlation') echo '_active'; ?>" onClick="filterAttributes('correlation', '<?php echo h($event['Event']['id']); ?>');">Correlation</div>
 		<?php if ($me['Role']['perm_sync'] || $event['Orgc']['id'] == $me['org_id']): ?>
