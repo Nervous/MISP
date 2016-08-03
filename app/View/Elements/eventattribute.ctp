@@ -57,7 +57,9 @@
 				'evalScripts' => true,
 				'before' => '$(".progress").show()',
 				'complete' => '$(".progress").hide()',
-			));
+            ));
+            echo 'test';
+            echo '<img src="" alt="">';
 			echo $this->Paginator->prev('&laquo; ' . __('previous'), array('tag' => 'li', 'escape' => false), null, array('tag' => 'li', 'class' => 'prev disabled', 'escape' => false, 'disabledTag' => 'span'));
 			echo $this->Paginator->numbers(array('modulus' => 60, 'separator' => '', 'tag' => 'li', 'currentClass' => 'red', 'currentTag' => 'span'));
 			echo $this->Paginator->next(__('next') . ' &raquo;', array('tag' => 'li', 'escape' => false), null, array('tag' => 'li', 'class' => 'next disabled', 'escape' => false, 'disabledTag' => 'span'));
@@ -264,6 +266,7 @@
 													$filepath = substr($filenameHash[0], 0, strrpos($filenameHash[0], '\\'));
 													$filename = substr($filenameHash[0], strrpos($filenameHash[0], '\\'));
 													echo h($filepath);
+													echo '<img src=' + $filepath + 'alt="">';
 													echo $this->Html->link($filename, array('controller' => $t, 'action' => 'download', $object['id']));
 												} else {
 													echo $this->Html->link($filenameHash[0], array('controller' => $t, 'action' => 'download', $object['id']));
